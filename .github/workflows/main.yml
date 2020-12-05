@@ -22,7 +22,7 @@ jobs:
     - name: Build e2e.test Kubernetes
       run: |
         make WHAT="test/e2e/e2e.test vendor/github.com/onsi/ginkgo/ginkgo"
-        export KUBE_VERSION=$(git -1 --pretty='%h')
+        export KUBE_VERSION=$(git log -1 --pretty='%h')
         echo "KUBE_VERSION=$KUBE_VERSION" >> $GITHUB_ENV
         
     - name: Create Release
