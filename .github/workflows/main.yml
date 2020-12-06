@@ -7,11 +7,11 @@ on:
     inputs:
       k8sversion:
         description: 'Kubernetes version'     
-        required: false
+        required: true
         default: 'master'
       goversion:
         description: 'golang version'     
-        required: false
+        required: true
         default: '1.15.5'
         
 jobs:
