@@ -9,10 +9,6 @@ on:
         description: 'Kubernetes version'     
         required: true
         default: 'master'
-      goversion:
-        description: 'golang version'     
-        required: true
-        default: '1.15.5'
         
 jobs:
   build:
@@ -21,7 +17,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v1
       with:
-        go-version: ${{ github.event.inputs.goversion }}
+        go-version: "1.15.6"
           
     - name: Checkout Kubernetes
       uses: actions/checkout@v2
